@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+  web:
+    build: .
+    volumes:
+      - ./pro:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - "3500:3000"
+    command: "npm run start"
+    restart: always
